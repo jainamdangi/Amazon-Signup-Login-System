@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reset Your Password</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="/public/forget.css">
+</head>
+<body>
+  <section class="reset-card" role="main" aria-label="Reset your password form">
+    <h1>Reset Your Password</h1>
+    <form id="resetPasswordForm" method="POST" novalidate>
+      <div class="input-group">
+        <label for="newPassword">New Password</label>
+        <input
+          type="password"
+          id="newPassword"
+          name="newPassword"
+          autocomplete="new-password"
+          placeholder="Enter new password"
+          aria-describedby="newPasswordError"
+          required
+          minlength="8"
+        />
+        <span class="material-icons input-icon" aria-hidden="true">lock</span>
+        <p id="newPasswordError" class="error-message" aria-live="polite"></p>
+      </div>
+      <div class="input-group">
+        <label for="rePassword">Confirm Password</label>
+        <input
+          type="password"
+          id="rePassword"
+          name="confirmPassword"
+          autocomplete="new-password"
+          placeholder="Re-enter new password"
+          aria-describedby="rePasswordError"
+          required
+          minlength="8"
+        />
+        <span class="material-icons input-icon" aria-hidden="true">lock</span>
+        <p id="rePasswordError" class="error-message" aria-live="polite"></p>
+      </div>
+      <button type="submit" aria-label="Reset password">Reset Password</button>
+    </form>
+  </section>
+
+  <script src="/public/forget.js"></script>
+</body>
+</html>
+

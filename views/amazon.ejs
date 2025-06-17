@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Amazon - Online Shopping</title>
+<link rel="stylesheet" href="/public/amazon.css">
+</head>
+<body>
+  <!-- Top Navigation -->
+  <nav class="nav-top" aria-label="Primary Navigation">
+    <div class="nav-logo" tabindex="0" aria-label="Amazon Home">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo" />
+    </div>
+    <div class="nav-location" tabindex="0" aria-label="Select your address">
+      <span>Hello</span>
+      <span><strong>Select your address</strong></span>
+    </div>
+    <div class="nav-search" role="search">
+      <form class="search-bar" onsubmit="event.preventDefault(); alert('Search submitted')" aria-label="Search Amazon">
+        <input type="text" placeholder="Search Amazon" aria-label="Search Amazon" />
+        <button type="submit" aria-label="Search"><svg height="20" width="20" viewBox="0 0 24 24" fill="black"><path d="M21.71 20.29l-3.388-3.388A7.918 7.918 0 0 0 18 10a8 8 0 1 0-8 8 7.918 7.918 0 0 0 6.906-3.678l3.388 3.388a1 1 0 0 0 1.414-1.414zM10 16a6 6 0 1 1 6-6 6.007 6.007 0 0 1-6 6z"/></svg></button>
+      </form>
+    </div>
+    <div class="nav-links" aria-label="User account links">
+      <div tabindex="0">
+        <span>Hello, Sign in</span>
+        <span>Account & Lists</span>
+      </div>
+      <div tabindex="0">
+        <span>Returns</span>
+        <span>& Orders</span>
+      </div>
+    </div>
+    <div class="nav-cart" tabindex="0" aria-label="Shopping cart">
+      <svg height="32" width="32" fill="white" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M7 18c-1.104 0-2 .897-2 2s.896 2 2 2 2-.897 2-2-.896-2-2-2zm10 0c-1.104 0-2 .897-2 2s.896 2 2 2 2-.897 2-2-.896-2-2-2zM7.993 15h8l1.733-7H6.26l1.733 7zM21.45 8h-2.694l-.99-4.966A1 1 0 0 0 16.795 2H5.342L5 0H0v2h3.158l1.582 8H18.58l1.168 5.229A2.5 2.5 0 0 1 17.327 17H7v-2h9.43a.5.5 0 1 0 0-1H7a1 1 0 0 1-.89-1.451l.36-.66h11.98l.5-2z"/>
+      </svg>
+      <div class="cart-count" aria-live="polite">0</div>
+    </div>
+  </nav>
+  <!-- Secondary nav -->
+  <nav class="nav-secondary" aria-label="Secondary Navigation">
+    <div tabindex="0">All</div>
+    <div tabindex="0">Today's Deals</div>
+    <div tabindex="0">Customer Service</div>
+    <div tabindex="0">Gift Cards</div>
+    <div tabindex="0">Registry</div>
+    <div tabindex="0">Sell</div>
+    <div tabindex="0">Coupons</div>
+    <div tabindex="0">Amazon Basics</div>
+    <div tabindex="0">Prime</div>
+  </nav>
+  <!-- Hero Slider -->
+  <section class="hero-slider" aria-label="Promotional Banner Slider">
+    <img class="hero-slide active" src="/public/banner1.jpg" alt="Amazon Wireless Deals" />
+    <img class="hero-slide" src="/public/banner2.jpg" alt="Amazon Mobile Accessories" />
+    <img class="hero-slide" src="/public/banner3.png" alt="Amazon TV Deals" />
+    <div class="hero-nav">
+      <button class="prev" aria-label="Previous Slide">&#10094;</button>
+      <button class="next" aria-label="Next Slide">&#10095;</button>
+    </div>
+  </section>
+  <!-- Product Sections -->
+  <section class="product-section" aria-label="Featured Deals">
+    <h2 class="section-title">Today's Deals</h2>
+    <div class="products-row" id="deals-row">
+      <article class="product-card" tabindex="0" aria-label="Fire TV Stick 4K">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/51CgKGfMelL._AC_SL1000_.jpg" alt="Fire TV Stick 4K" />
+        <div class="product-title">Fire TV Stick 4K streaming device with Alexa Voice Remote</div>
+        <div class="product-price">₹3,999.00</div>
+      </article>
+      <article class="product-card" tabindex="0" aria-label="Kindle Paperwhite">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/41GTUYFZ0xL._AC_SL1000_.jpg" alt="Kindle Paperwhite" />
+        <div class="product-title">Kindle Paperwhite – Now Waterproof with 2x the Storage</div>
+        <div class="product-price">₹13,999.00</div>
+      </article>
+      <article class="product-card" tabindex="0" aria-label="Echo Dot (4th Gen)">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/610o2cY-78L._AC_SL1000_.jpg" alt="Echo Dot (4th Gen)" />
+        <div class="product-title">Echo Dot (4th Gen) | Smart speaker with Alexa</div>
+        <div class="product-price">₹3,499.00</div>
+      </article>
+      <article class="product-card" tabindex="0" aria-label="Apple AirPods Pro">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/71bhWgQK-cL._AC_SL1500_.jpg" alt="Apple AirPods Pro" />
+        <div class="product-title">Apple AirPods Pro</div>
+        <div class="product-price">₹24,900.00</div>
+      </article>
+      <article class="product-card" tabindex="0" aria-label="Samsung Galaxy Watch Active2">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/61-8b8acj7L._AC_SL1500_.jpg" alt="Samsung Galaxy Watch Active2" />
+        <div class="product-title">Samsung Galaxy Watch Active2</div>
+        <div class="product-price">₹19,990.00</div>
+      </article>
+    </div>
+  </section>
+  <section class="product-section" aria-label="Popular in Electronics">
+    <h2 class="section-title">Popular in Electronics</h2>
+    <div class="products-row" id="electronics-row">
+      <article class="product-card" tabindex="0" aria-label="Apple iPhone 13">
+        <img src="https://m.media-amazon.com/images/I/61l9ppRIiqL._AC_UY545_FMwebp_QL65_.jpg" alt="Apple iPhone 13" />
+        <div class="product-title">Apple iPhone 13 (128GB) - Blue</div>
+        <div class="product-price">₹59,900.00</div>
+      </article>
+      <article class="product-card" tabindex="0" aria-label="Sony WH-1000XM4 Wireless Headphones">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/71o8Q5XJS5L._AC_SL1500_.jpg" alt="Sony WH-1000XM4 Wireless Headphones" />
+        <div class="product-title">Sony WH-1000XM4 Wireless Noise Canceling Headphones</div>
+        <div class="product-price">₹24,990.00</div>
+      </article>
+      <article class="product-card" tabindex="0" aria-label="Canon EOS M50 Mark II Mirrorless Camera">
+        <img src="https://m.media-amazon.com/images/I/81LskAU5h1L._AC_UY545_FMwebp_QL65_.jpg" alt="Canon EOS M50 Mark II Mirrorless Camera" />
+        <div class="product-title">Canon EOS M50 Mark II Mirrorless Camera</div>
+        <div class="product-price">₹59,995.00</div>
+      </article>
+      <article class="product-card" tabindex="0" aria-label="GoPro HERO9 Black">
+        <img src="https://m.media-amazon.com/images/I/51JwcRWiefL._AC_UY545_FMwebp_QL65_.jpg" alt="GoPro HERO9 Black" />
+        <div class="product-title">GoPro HERO9 Black – Waterproof Action Camera</div>
+        <div class="product-price">₹33,500.00</div>
+      </article>
+      <article class="product-card" tabindex="0" aria-label="Bose SoundLink Revolve+">
+        <img src="https://m.media-amazon.com/images/I/71eJQYXTVxL._AC_UY545_FMwebp_QL65_.jpg" alt="Bose SoundLink Revolve+" />
+        <div class="product-title">Bose SoundLink Revolve+ Portable Bluetooth Speaker</div>
+        <div class="product-price">₹24,990.00</div>
+      </article>
+    </div>
+  </section>
+  <section class="promotion-banner" aria-label="Special Promotions">
+    <div class="promo-row">
+      <a href="#" class="promo-card" tabindex="0" aria-label="Shop Gift Cards">
+        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/prime/giftcards/GW_GC_PC_App_1500x300._CB664053627_.jpg" alt="Gift Cards Promotion" />
+      </a>
+      <a href="#" class="promo-card" tabindex="0" aria-label="Amazon Prime Membership">
+        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/prime/prime_membership/pro/bb_redesign/Prime_PC_1500x300._CB663988321_.jpg" alt="Amazon Prime Membership Promotion" />
+      </a>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-top" role="contentinfo">
+      <div class="footer-column" tabindex="0" aria-label="Get to Know Us">
+        <h4>Get to Know Us</h4>
+        <ul>
+          <li>Careers</li>
+          <li>Blog</li>
+          <li>About Amazon</li>
+          <li>Investor Relations</li>
+          <li>Amazon Devices</li>
+          <li>Amazon Science</li>
+        </ul>
+      </div>
+      <div class="footer-column" tabindex="0" aria-label="Make Money with Us">
+        <h4>Make Money with Us</h4>
+        <ul>
+          <li>Sell products on Amazon</li>
+          <li>Sell on Amazon Business</li>
+          <li>Sell apps on Amazon</li>
+          <li>Become an Affiliate</li>
+          <li>Advertise Your Products</li>
+          <li>Host an Amazon Hub</li>
+        </ul>
+      </div>
+      <div class="footer-column" tabindex="0" aria-label="Amazon Payment Products">
+        <h4>Amazon Payment Products</h4>
+        <ul>
+          <li>Amazon Rewards Visa Signature Cards</li>
+          <li>Amazon.com Store Card</li>
+          <li>Amazon Business Card</li>
+          <li>Amazon Business Line of Credit</li>
+          <li>Shop with Points</li>
+          <li>Credit Card Marketplace</li>
+        </ul>
+      </div>
+      <div class="footer-column" tabindex="0" aria-label="Let Us Help You">
+        <h4>Let Us Help You</h4>
+        <ul>
+          <li>Amazon and COVID-19</li>
+          <li>Your Account</li>
+          <li>Shipping Rates & Policies</li>
+          <li>Amazon Prime</li>
+          <li>Returns & Replacements</li>
+          <li>Help</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom" tabindex="0" aria-label="Amazon Footer Disclaimer">
+      &copy; 1996-2024, Amazon.com, Inc. or its affiliates
+    </div>
+  </footer>
+
+<script src="/public/amazon.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Amazon Sign Up</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<link rel="stylesheet" href="/public/signup.css">
+</head>
+<body>
+  <main role="main" class="signup-container" aria-label="Amazon Sign Up Form">
+    <a href="https://www.amazon.in/ref=nav_logo" aria-label="Amazon Homepage logo" class="logo" tabindex="-1">
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 1024 300" xmlns="http://www.w3.org/2000/svg" fill="#FF9900">
+        <path d="M0 168h33c4-15 13-50 27-98l51 1c13 39 28 75 44 108 16 34 32 64 47 89 6 11 14 19 24 24 10 4 21 7 32 7 13 0 25-2 37-7 12-4 24-11 37-19l-2-4a172 172 0 0 1-32 18c-11 5-23 7-36 7a77 77 0 0 1-38-10 66 66 0 0 1-25-24c-9-14-19-36-28-65-10-30-20-64-29-101l-45-1c-16 56-27 98-33 126h-18v-20Zm286 50c0 25 7 44 22 57a63 63 0 0 0 45 18c13 0 25-4 37-12a69 69 0 0 0 25-34l14 4a84 84 0 0 1-20 40c-12 14-27 22-46 24-20 2-36-3-50-16-14-12-20-30-20-54 0-24 7-43 20-56 14-14 32-20 53-20a77 77 0 0 1 53 21c15 15 23 35 23 58h-14a51 51 0 0 0-49-37c-19 0-34 7-44 22-6 9-9 23-9 40Zm131-91-1 20 70 22-70 23 1 20h113v-20l-68-22 68-23v-20h-113Zm220-40a132 132 0 0 1 63 18l-9 17c-15-11-29-17-44-17-37 0-63 26-63 64 0 38 29 64 66 64a92 92 0 0 0 44-11l-11 21v9h56v-122h-56Zm-4 96a69 69 0 0 1-42-14c-14-14-20-30-20-51 0-23 10-41 27-51a69 69 0 0 1 51-4v120Zm142-96-55 155h16l13-39h68l12 39h17l-55-155h-17Zm-18 20 20 67h-40l20-67Zm114-20h-18v155h17v-74l60 74h14v-155h-17v75l-59-75Zm-8 152 9-36 56 69h18v-119h-17v75l-59-75Zm187-140c-53 0-91 37-91 82 0 46 38 81 91 81 52 0 91-37 91-82 0-44-39-81-91-81Zm-29 77c0-28 23-50 58-50 33 0 58 23 58 51 0 29-25 51-58 51-35 0-58-22-58-52Z"/>
+      </svg>
+    </a>
+    <h1>Create account</h1>
+    <p class="subtext">Create your Amazon account. It's free and easy.</p>
+    <form  id="signup-form" novalidate method="post">
+      <div class="form-group">
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder=" "
+          autocomplete="name"
+          required
+          aria-describedby="name-error"
+          aria-required="true"
+        />
+        <label for="name">Your name</label>
+        <div id="name-error" class="error-message" role="alert"></div>
+      </div>
+      <div class="form-group">
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder=" "
+          autocomplete="email"
+          required
+          aria-describedby="email-error"
+          aria-required="true"
+        />
+        <label for="email">Email</label>
+        <div id="email-error" class="error-message" role="alert"></div>
+      </div>
+      <div class="form-group">
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder=" "
+          autocomplete="new-password"
+          required
+          aria-describedby="password-error"
+          aria-required="true"
+          minlength="6"
+          aria-autocomplete="list"
+        />
+        <label for="password">Password (6 or more characters)</label>
+        <span
+          id="toggle-password"
+          class="password-toggle material-icons"
+          tabindex="0"
+          role="button"
+          aria-label="Show password"
+          aria-pressed="false"
+        >
+          visibility_off
+        </span>
+        <div id="password-error" class="error-message" role="alert"></div>
+      </div>
+      <div class="form-group">
+        <input
+          type="password"
+          id="password-confirm"
+          name="repassword"
+          placeholder=" "
+          autocomplete="new-password"
+          required
+          aria-describedby="password-confirm-error"
+          aria-required="true"
+          minlength="6"
+        />
+        <label for="password-confirm">Re-enter password</label>
+        <div id="password-confirm-error" class="error-message" role="alert"></div>
+      </div>
+      <div class="checkbox-group">
+        <input
+          type="checkbox"
+          id="terms"
+          name="terms"
+          required
+          aria-required="true"
+          aria-describedby="terms-error"
+        />
+        <label for="terms">
+          By creating an account, you agree to
+          <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=508088" target="_blank" rel="noopener noreferrer">Amazon's Conditions of Use</a> and
+          <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=201909000" target="_blank" rel="noopener noreferrer">Privacy Notice</a>.
+        </label>
+      </div>
+      <div id="terms-error" class="error-message" role="alert"></div>
+      <button type="submit" id="signup-submit">Create your Amazon account</button>
+    </form>
+  </main>
+
+<script src="/public/signup.js"></script>
+</body>
+</html>
+

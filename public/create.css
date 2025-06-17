@@ -1,0 +1,139 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f3f3f3;
+  color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 32px 16px 64px;
+}
+a {
+  color: #0073bb;
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover,
+a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+.container {
+  background: #fff;
+  max-width: 480px;
+  width: 100%;
+  border-radius: 8px;
+  padding: 32px 32px 40px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.greeting {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  text-align: center;
+  color: #111;
+}
+.email {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 24px;
+  text-align: center;
+  user-select: text;
+}
+.info-text {
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin-bottom: 32px;
+  text-align: center;
+  color: #111;
+  line-height: 1.4;
+}
+button.primary-btn {
+  background-color: #febd69;
+  border: none;
+  padding: 14px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #111;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+  width: 100%;
+}
+button.primary-btn:hover,
+button.primary-btn:focus {
+  background-color: #f3a847;
+  outline: none;
+}
+.customer-prompt {
+  text-align: center;
+  font-size: 1rem;
+  margin: 16px 0 8px;
+  font-weight: 500;
+  color: #111;
+}
+.sign-in-link {
+  text-align: center;
+  font-size: 1rem;
+  color: #0073bb;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s ease;
+  font-weight: 600;
+}
+.sign-in-link:hover,
+.sign-in-link:focus {
+  color: #004a8f;
+  outline: none;
+  text-decoration: underline;
+}
+footer.footer {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid #ddd;
+  font-size: 0.875rem;
+  color: #555;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px 32px;
+  user-select: none;
+}
+footer.footer a {
+  color: #0073bb;
+  font-weight: 500;
+}
+footer.footer a:hover,
+footer.footer a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+footer.copyright {
+  margin-top: 16px;
+  font-size: 0.8rem;
+  color: #777;
+  user-select: none;
+  text-align: center;
+}
+@media (max-width: 480px) {
+  .container {
+    padding: 24px 20px 32px;
+  }
+  .greeting {
+    font-size: 1.3rem;
+  }
+  button.primary-btn {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}

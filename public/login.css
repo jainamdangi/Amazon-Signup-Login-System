@@ -1,0 +1,272 @@
+*{
+    margin: 0;
+    padding:0;
+    
+}
+body{
+    height: auto;
+}
+.final{
+    padding: 14px 18px 14px 18px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: auto;
+}
+.amazonlogo{
+    margin-bottom: 16px;
+    width:1244px;
+    height: 31px;
+    display: flex;
+    justify-content: center;
+    
+}
+#logoimg{
+    width:103px;
+    height: 31px;
+    
+
+}
+.box3{
+    margin:0px 0px 12px;
+    height:436px;
+}
+#boxn2{
+    
+    height: 436px;
+    width:700px;
+    margin-top:10px;
+    display:flex;
+    justify-content: center;
+}
+
+.box{
+    min-height: 313px;
+    width: 295.4px;
+    padding: 20px 26px 20px 26px;
+    border:1px solid;
+    border-radius:10px;
+    height: auto;
+}
+#h1{
+    margin-bottom:8px;
+    padding-bottom: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+}
+#eid{
+    width:296px;
+    height: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px 0px 2px 2px;
+    color:black;
+    font-weight: 700;
+    font-size:14px;
+
+}
+#input1{
+    width:278px;
+    height: 24px;
+    padding: 3px 7px 3px 7px;
+    border-radius:7px;
+    border:1px solid black;
+}
+input:focus{
+    
+    outline:2px solid #007185;
+    
+}
+#btn1{
+    width:293px;
+    height: 29px;
+    padding: 1px 6px;
+    border-radius : 15px;
+    border:none;
+    background-color: #ffd500;
+}
+#btn1:hover{
+    background-color: #e0c01b;
+    cursor: pointer;
+}
+.section1{
+    width: 296px;
+    height: 78px;
+    margin: 14px 0px 22px 0px;
+}
+#textbox{
+    width:296px;
+    height: 42px;
+    margin-top: 16px;
+    font-size:14px;
+}
+.a{
+    color:#007185;
+
+}
+.a:hover{
+    color:rgb(224, 81, 9);
+}
+.a2{
+    color:#007185;
+}
+.a2:hover{
+    color:rgb(224, 81, 9);
+    text-decoration: underline rgb(224, 81, 9);
+    cursor: pointer;
+}
+#s2{
+    font-weight: 600;
+    font-size:15.5px;
+}
+.row-gap{
+    margin-bottom: 14px;
+    margin-top:20px;
+}
+#arrow{
+    padding-top: -16px;
+}
+
+.need{
+    height: 22px;
+    width:95px;
+    padding-left: 2px;
+    padding-top: 2px;
+    border-radius:10px;
+}
+.need:hover{
+    cursor: pointer;
+}
+.btnnh1{
+    /* height: 22px;
+    width:95px; */
+    border:3px solid #026475;
+    /* padding-left: 2px;
+    padding-top: 2px;
+    border-radius:10px; */
+    
+}
+.combain-div{
+    height: 44px;
+    /* background-color: pink; */
+    width:269px;
+}
+.outerdiv{
+    height: 16px;
+    width:269px;
+    padding-left:11px;
+    margin-top:4px;
+
+}
+.a3{
+    color:#007185;
+    font-size:15.5px;
+    font-weight: 545;
+}
+.a3:hover{
+    color:rgb(224, 81, 9);
+    text-decoration: underline rgb(224, 81, 9);
+}
+.sec2{
+    margin-bottom: 4px;
+}
+.space{
+    height: 20px;
+}
+
+.underline{
+    margin-bottom: 14px;
+    padding-top: 1px;
+
+}
+#h5{
+    justify-self: center;
+    font-weight: 400;
+    padding: 0px 8px 0px 7px;
+}
+#btncr{
+    width:349px;
+    height: 29px;
+    padding: 0px 10px 0px 11px;
+    border-radius:20px;
+    background-color: white;
+    border:1px solid black;
+    justify-self: center;
+}
+#btncr:hover{
+    background-color: rgb(245, 245, 245);
+    cursor: pointer;
+}
+.midct{
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+.fotter{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 46px;
+    margin-top: 2px;
+    height: auto;
+}
+.space1{
+    width:1499px;
+    height: auto;
+    margin:32px 0px 0px 0px;
+   
+}
+.endline{
+    width: 100%;
+}
+.blankdiv{
+    height: 40px;
+    
+}
+#hr1{
+    width:100%;
+}
+.ursupport{
+    height: 24px;
+    margin-bottom: 8px;
+    width: 100%;
+    
+}
+
+.urs1{
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    width: 100%;
+    margin-bottom: 12px;
+}
+#a1,#a2,#a3{
+    width:99px;
+    font-size: 14px;
+    color:#007185;
+    text-decoration: none;
+}
+#a1:hover{
+    color:rgb(224, 81, 9);
+    text-decoration: underline rgb(224, 81, 9);
+}
+#a2:hover{
+    color:rgb(224, 81, 9);
+    text-decoration: underline rgb(224, 81, 9);
+}
+#a3:hover{
+    color:rgb(224, 81, 9);
+    text-decoration: underline rgb(224, 81, 9);
+}
+li{
+    list-style-type: none;
+    margin: 0px 15px;
+}
+.enddl{
+    display: flex;
+    justify-self: center;
+}
+#spl{
+    font-size: 14px;
+    color:rgb(42, 40, 40);
+}
