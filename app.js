@@ -130,7 +130,6 @@ app.post('/signup',async(req,res)=>{
   userdata.save()
     .then(()=>{
       res.redirect('/');
-      req.session.email = email;
     })
     .catch((err)=>{
       console.log("something went wrong ",err);
