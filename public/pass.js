@@ -15,6 +15,6 @@ document.getElementById("pass-form").addEventListener("submit", async(e)=>{
     if(data.success){
         window.location.href = "/home";
     }else{
-        document.getElementById("err-ms").innerText = data.message;
+        document.getElementById("err-ms").textContent = data.message;
     }
 });

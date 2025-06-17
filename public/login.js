@@ -18,7 +18,6 @@ btnNeed.addEventListener("click", function (event) {
 
   if (downArrow.style.transform === "rotate(180deg)") {
     downArrow.style.transform = "rotate(0deg)";
-    // rowExpend_N.style.height = "none";
     rowExpend_N.style = "none";
    
     exp.remove();
@@ -42,22 +41,3 @@ div.addEventListener("click", function () {
   btnNeed.classList.remove("btnnh1");
 });
 
-
-
-// Continue Button use
-
-let btnCont = document.querySelector("#btn1");
-
-function ValidateEmail(){
-  const email = document.querySelector("#input1").value;
-
-  if(!email.endsWith('@gmail.com')){
-    return false;
-  }else{
-    return true;
-  }
-}
-
-btnCont.addEventListener("click",function(){
-  return ValidateEmail();
-})
