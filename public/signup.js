@@ -1,4 +1,38 @@
 (function () {
+
+  // added manualy
+  // Final form submission
+  document.getElementById("signup-form").addEventListener('submit', async(e) => {
+    // if (!updateSubmitState()) {
+    //   e.preventDefault(); // block if invalid
+    // }
+    e.preventDefault();
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const repassword = document.getElementById("password-confirm").value;
+
+    const res = await fetch("/signup",{
+      method:"POST",
+      headers:{
+        "Content-Type":"application/json",
+      },
+      body:JSON.stringify({name,email,password,repassword}),
+    });
+
+    const data = await res.json();
+
+    if(data.success){
+      window.location.href = "/";
+    }else{
+      document.getElementById("err").textContent = data.message;
+    }
+  });
+
+
+
+  
+
   const form = document.getElementById('signup-form');
   const submitBtn = document.getElementById('signup-submit');
   const nameInput = form.elements['name'];
@@ -136,10 +170,6 @@
     }
   }
 
-  // Final form submission
-  form.addEventListener('submit', (e) => {
-    if (!updateSubmitState()) {
-      e.preventDefault(); // block if invalid
-    }
-  });
+  
 })();
+

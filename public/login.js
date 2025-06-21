@@ -41,3 +41,33 @@ div.addEventListener("click", function () {
   btnNeed.classList.remove("btnnh1");
 });
 
+
+document.getElementById("login-form").addEventListener("submit",async(e)=>{
+  e.preventDefault();
+
+  const email = document.getElementById("email-input").value;
+  const error = document.getElementById("email-error");
+  error.textContent = "";
+  if (!/@gmail\.com$/i.test(email)) {
+  error.textContent = "Only Gmail addresses are allowed";
+  return;
+}
+  const res = await fetch("/",{
+      method : "POST",
+      headers : {
+        "Content-Type" : "application/json",
+      },
+      body : JSON.stringify({email}),
+  });
+
+  const data = await res.json();
+  console.log(data);
+
+  if(data.success){
+    window.location.href = "/pass";
+  }else if(data.redirect){
+    window.location.href = "/create";
+  }else{
+    email.textContent = data.message;
+  }
+})

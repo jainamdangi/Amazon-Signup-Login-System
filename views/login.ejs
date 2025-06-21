@@ -22,19 +22,20 @@
         <div class="box3">
           <div class="box">
             <h1 id="h1">Sign in</h1>
-            <form method="post">
+            <form method="post" id="login-form">
             <label for="Email or phone details" id="eid" name="email"
-              >Email or mobile phone number</label
+              >Email only</label
             >
             <input
-              type="text"
-              id="input1"
+              type="email"
+              id="email-input"
               maxlength="32"
-              minlength="11"
+              minlength="10"
               required
               name="email"
             />
             <br />
+            <div id="email-error" style="color:red"></div>
             <div class="section1">
               <button id="btn1" type="submit" >Continue</button>
             </form>

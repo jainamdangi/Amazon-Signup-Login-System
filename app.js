@@ -55,13 +55,14 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", async (req, res) => {
-  const email = req.body.email;
+  const {email} = req.body;
+
   const user = await UserData.findOne({ email });
   if (! user) {
-    return res.redirect('/create');
+    return res.json({success:false,redirect:"/create"});
   }
   req.session.email = email;
-  res.redirect("/pass");
+  return res.json({success:true});
 });
 
 // password page
@@ -71,10 +72,12 @@ app.get("/pass", (req, res) => {
 
 app.post("/pass", async (req, res) => {
   const email = req.session.email;
-  const password = req.body.password;
+  const {password} = req.body;
 
   if(!email) return res.redirect("/");
-
+  if(email){
+    res.json({ms : `${email}`})
+  }
   const user = await UserData.findOne({email,password});
   
   if(!user) return res.json({success : false,message:"you enter the wrong password"});
@@ -90,12 +93,11 @@ app.get('/forget',(req,res)=>{
 app.post('/forget',async(req,res)=>{
   const email = req.session.email;
   const {newPassword,confirmPassword} = req.body;
-  if(!req.session.email){
-    return res.redirect("/");
-  }
-  if(!email){
-    return res.redirect("/");
-  };
+
+  if(!req.session.email) return res.redirect("/");
+
+  if(!email) return res.redirect("/");
+
   if (newPassword !== confirmPassword) {
     return res.json({success:false,ms : "password are not same"});
   }
@@ -126,16 +128,21 @@ app.get('/signup',(req,res)=>{
 
 app.post('/signup',async(req,res)=>{
   const {name,email,password} = req.body;
-  const userdata = new UserData({name,email,password});
-  userdata.save()
-    .then(()=>{
-      res.redirect('/');
-    })
-    .catch((err)=>{
-      console.log("something went wrong ",err);
-      res.status(500).send("something wrong");
-    })
+  try{
+  const userEmail = await UserData.findOne({email});
+  console.log(userEmail);
+  if(userEmail) return res.json({success : false,message:`${email} is alrady exist`});
   
+  const userdata = new UserData({name,email,password});
+  
+   userdata.save();
+   res.json({success : true});
+  }
+  
+    catch(err){
+      console.log('something went wrong ',err);
+      res.send("something went wrong");
+    };
 });
 
 
