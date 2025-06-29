@@ -75,9 +75,9 @@ app.post("/pass", async (req, res) => {
   const {password} = req.body;
 
   if(!email) return res.redirect("/");
-  if(email){
-    res.json({ms : `${email}`})
-  }
+  // if(email){
+  //   res.json({ms : `${email}`})
+  // }
   const user = await UserData.findOne({email,password});
   
   if(!user) return res.json({success : false,message:"you enter the wrong password"});

@@ -3,6 +3,8 @@ document.getElementById("pass-form").addEventListener("submit", async(e)=>{
 
     
     const password = document.getElementById("password-input").value;
+        
+
 
     const res = await fetch("/pass",{
         method : "POST",
@@ -15,7 +17,12 @@ document.getElementById("pass-form").addEventListener("submit", async(e)=>{
     document.getElementById("email").textContent = data.ms;
     if(data.success){
         window.location.href = "/home";
+        document.getElementById("err-ms").textContent = "";
     }else{
         document.getElementById("err-ms").textContent = data.message;
+        setTimeout(()=>{
+            document.getElementById("err-ms").textContent = "";
+        },3000);
+        
     }
 });
